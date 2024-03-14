@@ -24,7 +24,7 @@ namespace BetterDecorator
 
         /// <summary>
         /// No main é verificado primeiro quantos argumentos o utilizador
-        /// colocou chamada a função Decor() com 3 parametros string,
+        /// colocou, chamando a função Decor() ou Decor(s,c,i)
         /// char e int.
         /// </summary>
         /// <param name="args"> numero de argumentos que o utilizador
