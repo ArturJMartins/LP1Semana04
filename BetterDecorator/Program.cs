@@ -4,6 +4,11 @@ namespace BetterDecorator
 {
     class Program
     {
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=',3);
+        }
+
         /// <summary>
         /// Agrupa certo numeros de caracters entre a frase.
         /// </summary>
@@ -18,14 +23,23 @@ namespace BetterDecorator
         }
 
         /// <summary>
-        /// No main é chamada a função Decor() com 3 parametros string,
+        /// No main é verificado primeiro quantos argumentos o utilizador
+        /// colocou chamada a função Decor() com 3 parametros string,
         /// char e int.
         /// </summary>
-        /// <param name="args"> input que o utilizador escreverá </param>
+        /// <param name="args"> numero de argumentos que o utilizador
+        /// escreverá </param>
         static void Main(string[] args)
         {
-            Console.WriteLine(Decor(args[0],char.Parse(args[1]),
-            int.Parse(args[2])));
+            if(args.Length > 0)
+            {
+                Console.WriteLine(Decor(args[0],char.Parse(args[1]),
+                int.Parse(args[2])));
+            }
+            else
+            {
+                Console.WriteLine(Decor());
+            }
         }
     }
 }
