@@ -26,10 +26,7 @@ namespace Special
 
         static void Main(string[] args)
         {
-            Console.WriteLine(GetSpecial(0));
-            Console.WriteLine(GetSpecial(1));
-            Console.WriteLine(GetSpecial(2));
-            Console.WriteLine(GetSpecial(7));
+            Console.WriteLine(GetSpecial(int.Parse(args[0])));
         }
     }
 }
